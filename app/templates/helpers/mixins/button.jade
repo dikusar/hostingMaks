@@ -1,0 +1,6 @@
+mixin button(opt)
+	-opt = opt || {};
+
+	.button(class=opt.buttonModClass)
+		a.button__link(class=opt.linkModClass)(href=jv0)
+			= opt.text

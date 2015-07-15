@@ -1,0 +1,60 @@
+// Devide `_val` by 2.
+_d(_val)
+	(_val / 2)
+
+sprite2Width($sprite)
+	width _d($sprite[4])
+
+sprite2Height($sprite)
+	height _d($sprite[5])
+
+sprite2Image($sprite)
+	background-image url($sprite[8])
+	background-repeat no-repeat
+
+sprite2Position($sprite)
+	background-position _d($sprite[2]) _d($sprite[3]);
+
+sprite2Size($sprite)
+	background-size _d($sprite[6]) _d($sprite[7])
+
+// All sprite image properties for Retina.
+sprite2($sprite)
+	sprite2Width($sprite)
+	sprite2Height($sprite)
+	sprite2Image($sprite)
+	sprite2Position($sprite)
+	sprite2Size($sprite)
+
+// Clear the float on any element.
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+radialGradientByPseudo($left, $height, $width, $before-top, $after-bottom)
+	&:after
+	&:before
+		position absolute
+		left $left
+		height $height
+		content ""
+		display block
+		width $width
+		background-image url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlZWVlZWUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmZmZmZmIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc')
+		background-image radial-gradient(ellipse at center, rgba(186,186,186,1) 0%,rgba(255,255,255,0) 71%)
+	&:before
+		top $before-top
+	&:after
+		bottom $after-bottom
+

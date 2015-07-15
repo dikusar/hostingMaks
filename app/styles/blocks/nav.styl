@@ -1,0 +1,41 @@
+.nav
+	float right
+	padding-top 18px
+	overflow hidden
+
+	&__item
+		float left
+		padding-left 10px
+		padding-right 10px
+		padding-bottom  10px
+		border-left 1px dashed grey_light
+		transition border-left-color hover-time linear
+
+		&:hover
+			border-left-color lighten(grey_light, 10)
+
+	&__link
+		display block
+		text-decoration none
+
+	&__link:hover &
+		&__text
+			color lighten(grey_base, 20)
+		&__hint
+			color lighten(grey_light, 10)
+
+	&__text
+		font-family font-georgia
+		font-size 14px
+		font-weight bold
+		text-transform uppercase
+		text-decoration none
+		color grey_base
+		transition color hover-time linear
+
+	&__hint
+		padding-top 4px
+		font-family font-tahoma
+		font-size 11px
+		color grey_light
+		transition color hover-time linear

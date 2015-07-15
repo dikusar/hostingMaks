@@ -1,0 +1,14 @@
+mixin nav(menu)
+	ul.nav__list
+		each item in menu
+			li.nav__item
+				a.nav__link(href=item.href, target="_blank")
+					.nav__text
+						|#{item.menu}
+					.nav__hint
+						|#{item.menuHint}
+
+
+
+
+

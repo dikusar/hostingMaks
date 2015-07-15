@@ -1,0 +1,48 @@
+extends ../layouts/default
+
+block head
+	- pageTitle = 'Polo 360';
+
+block content
+	main.main__content
+		section.main__section
+			h2.main__heading.gradient= headingText
+
+			+article({
+				title: "Perfect Logic",
+				description: "All you want your website to do.",
+				image: "/assets/images/article/logic.png",
+				text: articleTextLogic,
+				button: {
+							buttonModClass: "button_theme_silver",
+							linkModClass: "button__link_theme_blue",
+							text: "Learn More"
+						}
+				})
+
+			+article({
+				title: "Complete Solutionc",
+				description: "A tool anything and everything you can think",
+				image: "/assets/images/article/solution.png",
+				text: articleTextSolution,
+				button: {
+							buttonModClass: "button_theme_silver",
+							linkModClass: "button__link_theme_blue",
+							text: "Learn More"
+						}
+				})
+
+			+article({
+				title: "Uber Culture",
+				description: "Fresh. Modern and ready for future",
+				image: "/assets/images/article/culture.png",
+				text: articleTextCulture,
+				button: {
+							buttonModClass: "button_theme_silver",
+							linkModClass: "button__link_theme_blue",
+							text: "Learn More"
+						}
+				})
+
+
+

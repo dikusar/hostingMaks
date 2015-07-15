@@ -1,0 +1,90 @@
+.swiper
+	position relative
+
+	&:before
+		position absolute
+		display block
+		content ""
+		width 100%
+		height 336px
+		background linear-gradient(to bottom,  rgba(51,51,51,1) 0%,rgba(21,21,21,1) 100%)
+
+	&__container
+		position relative
+		width 938px
+		height 373px
+		padding-top 23px
+		margin 0 auto
+		overflow hidden
+		border-radius 5px
+
+		&:after
+			position absolute
+			bottom 3px
+			left 81px
+			content ""
+			display block
+			height 7px
+			width 83%
+			margin 0 auto
+			background radial-gradient(ellipse at center, rgba(61,61,61,1) 0%,rgba(255,255,255,0.14) 76%,rgba(255,255,255,0) 100%)
+			z-index 1
+
+
+	&__wrapper
+		position relative
+		overflow hidden
+		width 1000%
+		z-index 2
+
+	&__slide
+		float left
+		border 1px solid grey_border
+		border-radius 5px
+
+	&__pagination
+		position absolute
+		bottom 12px
+		height 20px
+		width 100%
+		padding-left 12px
+		z-index 3
+
+	&__controll
+		position relative
+		display block
+		float left
+		width 15px
+		height 15px
+		margin-right 4px
+		background-color #000
+		border-radius 50%
+		cursor pointer
+
+		&:before
+			position absolute
+			top 3px
+			left 3px
+			display block
+			content ""
+			width 9px
+			height 9px
+			border-radius 50%
+			background linear-gradient(to bottom, rgba(201,201,201,1) 0%,rgba(255,255,255,1) 20%,rgba(109,108,108,1) 99%)
+
+	&__img
+		display block
+
+	&-pagination-bullet-active
+		&:before
+			top 2px
+			left 2px
+			border 1px solid blue_border
+			box-shadow inset 2px -2px 43px -12px white
+			background linear-gradient(to bottom, rgba(153,223,245,1) 1%,rgba(2,176,230,1) 100%)
+
+
+
+
+
+
