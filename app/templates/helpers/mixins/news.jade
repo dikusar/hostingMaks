@@ -1,0 +1,18 @@
+mixin news (data)
+		article.news
+			h6.news__title
+				| News Updates
+			.news__item-wrapper
+				-each item in data
+					.news__item
+						a.news__link(href=item.href || jv0)
+							.news__img-wrapper
+								img.news__img(src=item.image alt="img")
+							.news__descript
+								|#{item.text}
+
+			+button({
+				buttonModClass: "button_theme_blue",
+				linkModClass: "button__link_theme_white",
+				text: "Visit our blog"
+			})

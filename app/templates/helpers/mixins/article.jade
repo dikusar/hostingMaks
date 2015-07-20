@@ -2,14 +2,16 @@ mixin article(obj)
 	-obj = obj || {};
 
 	article.article(class=obj.articleModClass)&attributes(obj.attr || {})
-		heder.article__header
+		header.article__header
 			h5.article__title
 				a.article__link(href=jv0)
 					= obj.title
 			span.article__descript
 				= obj.description
 		a.article__link-img(href=jv0)
+			.article__link-img-shadow
 			img.article__img(src=obj.image alt="img")
+			.article__link-img-shadow_bottom
 
 		p.article__text
 			= obj.text

@@ -1,0 +1,28 @@
+.social
+	h6.social__title
+		| Social Connection
+	.social__descript
+		= socialDescript
+
+	include ../component/social-icon
+
+	.social__newsletter
+		.social__title.social__title_newsletter
+			| Newsletter
+		.social__descript
+			= newsletterDescript
+		form.form(id="subscribe-form", class="subscribe__form js-form", method="post", action="/subscribe.action")
+			input.form__input(
+				type="email",
+				name="email",
+				placeholder="your email adress"
+			)
+			+button({
+				tag: "button",
+				buttonModClass: "button_theme_blue",
+				text: "Subscribe",
+				type: "submit"
+			})
+
+
+

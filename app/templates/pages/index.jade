@@ -1,17 +1,21 @@
 extends ../layouts/default
 
 block head
+	- pageDescription = 'Polo 360';
+	- pageKeywords = 'Polo 360';
+	- pageCopyright = 'Polo 360';
 	- pageTitle = 'Polo 360';
 
 block content
-	main.main__content
-		section.main__section
-			h2.main__heading.gradient= headingText
+	.main__content
+		section.main__section_type_lead
+			h2.main__heading= headingText
+				span.main__heading-shadow
 
 			+article({
 				title: "Perfect Logic",
 				description: "All you want your website to do.",
-				image: "/assets/images/article/logic.png",
+				image: "assets/images/article/logic.png",
 				text: articleTextLogic,
 				button: {
 							buttonModClass: "button_theme_silver",
@@ -21,9 +25,9 @@ block content
 				})
 
 			+article({
-				title: "Complete Solutionc",
+				title: "Complete Solution",
 				description: "A tool anything and everything you can think",
-				image: "/assets/images/article/solution.png",
+				image: "assets/images/article/solution.png",
 				text: articleTextSolution,
 				button: {
 							buttonModClass: "button_theme_silver",
@@ -35,7 +39,7 @@ block content
 			+article({
 				title: "Uber Culture",
 				description: "Fresh. Modern and ready for future",
-				image: "/assets/images/article/culture.png",
+				image: "assets/images/article/culture.png",
 				text: articleTextCulture,
 				button: {
 							buttonModClass: "button_theme_silver",
@@ -43,6 +47,16 @@ block content
 							text: "Learn More"
 						}
 				})
+
+		section.main__section_type_footer
+			.shadow
+			.border
+			include ../blocks/social-connect
+			include ../blocks/contact
+			include ../blocks/news-update
+
+	include ../blocks/footer
+
 
 
 

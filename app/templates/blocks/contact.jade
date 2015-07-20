@@ -1,0 +1,23 @@
+.contact
+	h6.contact__title
+		| Contact
+	form.form(id="contact-form", class="contact__form js-form", method="post", action="/contact.action")
+		input.form__input.form__input_contact(
+			type="text",
+			name="name",
+			placeholder="your name"
+		)
+		input.form__input.form__input_contact(
+			type="email",
+			name="email",
+			placeholder="your email adress"
+		)
+		textarea.form__textarea(placeholder="message")
+
+		+button({
+				tag: "button",
+				buttonModClass: "button_theme_blue",
+				text: "Send it",
+				type: "submit"
+			})
+

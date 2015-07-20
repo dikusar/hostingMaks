@@ -26,11 +26,12 @@ head
 	meta(name='copyright' content=pageCopyright)
 
 	link(href='https://fonts.googleapis.com/css?family=Cuprum:400,700&subset=latin,cyrillic' rel='stylesheet')
-	link(href='/assets/styles/common.css?' + timestamp rel='stylesheet')
+	link(href='assets/styles/common.css?' + timestamp rel='stylesheet')
 
 	<!--[if gte IE 9]>
 	style(type="text/css").
-		.gradient {
-			filter: none;
+		.button__shadow, .button__shadow_bottom{
+			top: -3px
 		}
+	script(src="//html5shiv.googlecode.com/svn/trunk/html5.js")
 	<![endif]-->

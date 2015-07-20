@@ -1,8 +1,48 @@
-.copyright
-	margin 30px -20px -20px
-	padding 20px
-	border-radius 0 0 4px 4px
+.footer
+	width 100%
+	height 184px
+	font-family font-myriadPro
+	background-color black_footer
+	clear both
+	border-top 10px solid black_footer_border
 
-	+to-width(540px)
-		margin-bottom -40px
-		border-radius 0
+	&__inner
+		width 940px
+		padding-top 18px
+		padding-left 7px
+		margin 0 auto
+
+	&__column-left
+		width 68%
+		float left
+
+	&__column-right
+		float left
+
+	&__powered
+	&__link
+	&__copyright
+		font-size 11px
+		color grey_footer
+
+	&__nav
+		padding-top 12px
+		overflow hidden
+
+		&-item
+			float left
+			padding-right 4px
+			margin-right 4px
+			border-right 1px solid grey_footer
+
+			&:last-of-type
+				border-right none
+
+	&__link
+		display block
+		text-decoration none
+
+
+	&__policy
+		padding-top 12px
+		clear both

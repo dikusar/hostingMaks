@@ -2,6 +2,7 @@ $(function () {
 
 	'use strict';
 
+// fire slider
 	var
 		$slider = $('.js-swiper-container'),
 		slider;
@@ -12,13 +13,10 @@ $(function () {
 		paginationClickable: true,
 		speed: 1000,
 		centeredSlides: true,
-		/*autoplay: 3000,*/
+		autoplay: 3000,
 		autoplayDisableOnInteraction: false,
 		loop: true,
-		simulateTouch: true,
-		paginationBulletRender: function (index, className) {
-			return '<span class="swiper__controll swiper-pagination-bullet">' + index + '</span>';
-		}
+		paginationElement: 'div',
 	});
 
 	$slider.mouseenter(function () {
@@ -29,4 +27,14 @@ $(function () {
 		slider.startAutoplay();
 	});
 
+// trigger event-click on div(class="swiper-pagination-switch")
+	var
+		$controll = $('.swiper-pagination-switch'),
+		div = document.createElement('div');
+
+	$(div).addClass('swiper-pagination-shadow')
+		.appendTo($controll)
+		.on('click', function () {
+			$(this).parent().trigger('click');
+		});
 });

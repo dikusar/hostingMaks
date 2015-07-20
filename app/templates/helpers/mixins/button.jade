@@ -1,6 +1,13 @@
 mixin button(opt)
 	-opt = opt || {};
 
-	.button(class=opt.buttonModClass)
-		a.button__link(class=opt.linkModClass)(href=jv0)
+	if (opt.tag)
+		button.button(class=opt.buttonModClass type=opt.type)
 			= opt.text
+	else
+		.button.button_tag_div(class=opt.buttonModClass type=opt.type)
+			.button__shadow
+			a.button__link(class=opt.linkModClass href=jv0)
+				= opt.text
+			.button__shadow_bottom
+
